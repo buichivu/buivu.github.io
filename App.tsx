@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, TextInput} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/FontAwesome';
 const App = () => {
   return (
@@ -43,8 +44,112 @@ const App = () => {
             style={{
               flex: 6,
             }}>
-            <View style={{}}>
-              <Text>Top</Text>
+            <View
+              style={{
+                margin: 30,
+              }}>
+              {/*Username*/}
+              <View
+                style={{
+                  marginBottom: 20,
+                }}>
+                <Text
+                  style={{
+                    color: 'black',
+                  }}>
+                  UserName
+                </Text>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    borderBottomColor: 'grey',
+                    borderBottomWidth: 1,
+                  }}>
+                  <View
+                    style={{
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      padding: 20,
+                    }}>
+                    <Icon name="user" size={15} />
+                  </View>
+                  <View
+                    style={{
+                      flex: 1,
+                    }}>
+                    <TextInput style={{}} placeholder={'type your username'} />
+                  </View>
+                </View>
+              </View>
+
+              {/*passWord*/}
+              <View>
+                <Text
+                  style={{
+                    color: 'black',
+                  }}>
+                  PassWord
+                </Text>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    borderBottomColor: 'grey',
+                    borderBottomWidth: 1,
+                  }}>
+                  <View
+                    style={{
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      padding: 20,
+                    }}>
+                    <Icon name="lock" size={15} />
+                  </View>
+                  <View
+                    style={{
+                      flex: 1,
+                    }}>
+                    <TextInput
+                      secureTextEntry={true}
+                      placeholder={'type your username'}
+                    />
+                  </View>
+                </View>
+              </View>
+              <View
+                style={{
+                  marginTop: 10,
+                  alignItems: 'flex-end',
+                }}>
+                <Text>Forgot password</Text>
+              </View>
+
+              {/*Login button*/}
+              <View
+                style={{
+                  marginVertical: 20,
+                }}>
+                <TouchableOpacity activeOpacity={0.5}>
+                  <LinearGradient
+                    style={{
+                      padding: 10,
+                      borderRadius: 50,
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignContent: 'center',
+                    }}
+                    colors={['#AED6F1', '#3498DB']}
+                    useAngle={true}
+                    angle={45}>
+                    <Text
+                      style={{
+                        color: 'white',
+                        fontWeight: 'bold',
+                      }}>
+                      LOGIN
+                    </Text>
+                  </LinearGradient>
+                </TouchableOpacity>
+              </View>
             </View>
             <View
               style={{
@@ -52,7 +157,13 @@ const App = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Text>Or Sing Up Using</Text>
+              <Text
+                style={{
+                  color: 'black',
+                }}>
+                Or Sing Up Using
+              </Text>
+
               <View
                 style={{
                   marginTop: 10,
@@ -92,12 +203,12 @@ const App = () => {
                     width: 35,
                     height: 35,
                     padding: 10,
-                    backgroundColor: '#3b5998',
+                    backgroundColor: '#EA4335',
                     borderRadius: 50,
                     justifyContent: 'center',
                     alignItems: 'center',
                   }}>
-                  <Icon name="facebook-f" size={20} color={'white'} />
+                  <Icon name="google" size={15} color={'white'} />
                 </TouchableOpacity>
               </View>
             </View>
